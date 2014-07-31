@@ -1064,8 +1064,8 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  
-  return " : ";
+  var buffer = "";
+  return buffer;
   }
 
   buffer += "<div class='heading'>\n  <h2>\n    <a href='#!/";
