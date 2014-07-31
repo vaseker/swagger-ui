@@ -18,7 +18,7 @@
       </div>
       <div class='content' id='{{parentId}}_{{nickname}}_content' style='display:none'>
         {{#if notes}}
-        <h4>Implementation Notes</h4>
+        <h4>Особенности реализации</h4>
         <p>{{{notes}}}</p>
         {{/if}}
         {{#oauth}}
@@ -34,11 +34,11 @@
         {{#oauth}}</div>{{/oauth}}
         {{#oauth}}
         <div class='access'>
-          <span class="api-ic ic-off" title="click to authenticate"></span>
+          <span class="api-ic ic-off" title="нажмите для аутентификации"></span>
         </div>
         {{/oauth}}
         {{#if type}}
-          <h4>Response Class</h4>
+          <h4>Схема ответа</h4>
           <p><span class="model-signature" /></p>
           <br/>
           <div class="response-content-type" />
@@ -46,15 +46,15 @@
         <form accept-charset='UTF-8' class='sandbox'>
           <div style='margin:0;padding:0;display:inline'></div>
           {{#if parameters}}
-          <h4>Parameters</h4>
+          <h4>Параметры</h4>
           <table class='fullwidth'>
           <thead>
             <tr>
-            <th style="width: 100px; max-width: 100px">Parameter</th>
-            <th style="width: 310px; max-width: 310px">Value</th>
-            <th style="width: 200px; max-width: 200px">Description</th>
-            <th style="width: 100px; max-width: 100px">Parameter Type</th>
-            <th style="width: 220px; max-width: 230px">Data Type</th>
+            <th style="width: 100px; max-width: 100px">Параметр</th>
+            <th style="width: 310px; max-width: 310px">Значение</th>
+            <th style="width: 200px; max-width: 200px">Описание</th>
+            <th style="width: 100px; max-width: 100px">Тип параметра</th>
+            <th style="width: 220px; max-width: 230px">Тип данных</th>
             </tr>
           </thead>
           <tbody class="operation-params">
@@ -64,37 +64,37 @@
           {{/if}}
           {{#if responseMessages}}
           <div style='margin:0;padding:0;display:inline'></div>
-          <h4>Response Messages</h4>
+          <h4>Ответ</h4>
           <table class='fullwidth'>
             <thead>
             <tr>
-              <th>HTTP Status Code</th>
-              <th>Reason</th>
-              <th>Response Model</th>
+              <th>HTTP код ответа</th>
+              <th>Причина</th>
+              <th>Схема ответа</th>
             </tr>
             </thead>
             <tbody class="operation-status">
-            
+
             </tbody>
           </table>
           {{/if}}
           {{#if isReadOnly}}
           {{else}}
           <div class='sandbox_header'>
-            <input class='submit' name='commit' type='button' value='Try it out!' />
-            <a href='#' class='response_hider' style='display:none'>Hide Response</a>
+            <input class='submit' name='commit' type='button' value='Выполнить!' />
+            <a href='#' class='response_hider' style='display:none'>Скрыть ответ</a>
             <img alt='Throbber' class='response_throbber' src='images/throbber.gif' style='display:none' />
           </div>
           {{/if}}
         </form>
         <div class='response' style='display:none'>
-          <h4>Request URL</h4>
+          <h4>URL запроса</h4>
           <div class='block request_url'></div>
-          <h4>Response Body</h4>
+          <h4>Тело ответа</h4>
           <div class='block response_body'></div>
-          <h4>Response Code</h4>
+          <h4>Код ответа</h4>
           <div class='block response_code'></div>
-          <h4>Response Headers</h4>
+          <h4>Заголовки ответа</h4>
           <div class='block response_headers'></div>
         </div>
       </div>
